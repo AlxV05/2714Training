@@ -12,7 +12,7 @@ public final class Constants {
     }
 
     public static final class IntakeConstants {
-        public static final int kIntakePort = 15;
+        public static final int kIntakePort = 12;
         public static final int kPivotPort = 14;
         public static final int kPivotFollowerPort = 20;
 
@@ -20,7 +20,7 @@ public final class Constants {
     }
 
     public static final class IndexConstants {
-        public static final int kIndexMotorPort = 12;
+        public static final int kIndexMotorPort = 15;
         public static final int kRollerMotorPort = 13;
     }
 }

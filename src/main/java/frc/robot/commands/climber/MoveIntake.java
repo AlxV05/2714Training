@@ -24,6 +24,8 @@ public class MoveIntake extends CommandBase {
   public enum IntakeState {
     INTAKE,
     EXTAKE,
+    LOWER,
+    RAISE,
     STOP;
   }
 
@@ -35,24 +37,31 @@ public class MoveIntake extends CommandBase {
   public void execute() {
     switch(intakeState) {
       case INTAKE:
-        intake.lowerIntake();
         intake.intakeBalls();
-        index.moveAll(0.75);
+        //index.moveAll(0.75);
+        break;
       case EXTAKE:
-        intake.lowerIntake();
         intake.extakeBalls();
-        index.moveAll(-0.75);
+        //index.moveAll(-0.75);
+        break;
       case STOP:
-        intake.raiseIntake();
+        //intake.raiseIntake();
         intake.stopIntake();
-        index.stopAll();
+        //index.stopAll();
+        break;
+      case LOWER:
+        intake.lowerIntake();
+        break;
+      case RAISE:
+        intake.raiseIntake();
+        break;
     }
   }
 
   
   @Override
   public void end(boolean interrupted) {
-    intake.raiseIntake();
+    //intake.raiseIntake();
     intake.stopIntake();
   }
 

@@ -26,10 +26,13 @@ public class MoveClimb extends CommandBase{
         switch(climberState) {
             case UP:
                 climber.climbUp();
+                break;
             case DOWN:
                 climber.climbDown();
+                break;
             case STOP:
                 climber.climbStop();
+                break;
         }
     }
 

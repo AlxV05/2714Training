@@ -26,10 +26,13 @@ public class MovePivot extends CommandBase{
         switch(pivotState) {
             case OUT:
                 climber.pivotOut();
+                break;
             case IN:
                 climber.pivotIn();
+                break;
             case STOP:
                 climber.pivotStop();
+                break;
         }
     }
 

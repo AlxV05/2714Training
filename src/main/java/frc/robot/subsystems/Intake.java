@@ -38,16 +38,10 @@ public class Intake extends SubsystemBase {
   }
  
   public void lowerIntake() {
-    int loweredLimit = 10; // Idk what it is.
-    if (pivotEncoder.getPosition() > loweredLimit) {
-      pivotMotor.set(0.2);
-    }
+    pivotMotor.set(0.1);
   }
 
   public void raiseIntake() {
-    int raisedLimit = 20; //Idk what this is either. Can get info at meetings
-    if (pivotEncoder.getPosition() < raisedLimit ) {
-      pivotMotor.set(-0.2);
-    }
+    pivotMotor.set(-0.1);
   }
 }
